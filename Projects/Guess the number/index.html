@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>    
+</head>
+<style>
+    body{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .container{
+        background-color: rgb(215, 205, 205);
+        display: flex;
+        padding:20px;
+        border-radius: 20px;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 2em;
+        font-weight: 600;
+        width: fit-content;
+        height: 100%;
+    }
+    .para1{
+        font-family: sans-serif;
+        font-style: italic;
+    }
+    .inputNumber{
+        margin: 6px;
+        padding: 8px;
+        font-size: large;
+        border-radius: 4px;
+    }
+    .submitButton{
+        margin: 10px;
+        padding: 6px 22px;
+        font-size: large;
+        border-radius: 4px;    
+    }
+    .Guesses,.previous{
+        display: flex;
+        flex-direction: row;
+        padding: 6px;
+    }
+    .lowOrHigh{
+        /* display: flex;
+        flex-direction: column; */
+        padding: 4px;
+        background-color: rgb(175, 41, 41);
+        color: yellow;        
+        display: none;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="heading1">Guess The Number</h1>
+        <p class="para1">Guess a number in between 1 and 100</p>
+        <input type="text" placeholder="Enter your Number" class="inputNumber" id="inputNum">
+        <input type="submit" class="submitButton" id="submitBtn">
+        <div class="previous">
+            <div class="previousNums" >Previous Nums: </div>
+            <div class="previousVals"></div>
+        </div>
+        <div class="Guesses">
+            <div class="GuessNumber" >Remmaining Guesses: </div>
+            <div class="GuessVal">10</div>
+        </div>
+        <div class="lowOrHigh"></div>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>

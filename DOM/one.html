@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<style>
+    .bg-black{
+        background-color: rgb(45, 43, 43);
+        color: white;
+    }
+</style>
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">Dom learning</h1>
+        <h2 id="help">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <h2 id="help">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <h2 id="help">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <h2 id="help">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <p class="para-1">Lorem ipsum dolor sit amet.</p>
+        <p class="para-1">Lorem ipsum dolor sit amet.</p>
+        <p class="para-1">Lorem ipsum dolor sit amet.</p>        
+    </div>
+    <ul>
+        <li class="one">helloo bhaii Lorem, ipsum.</li>
+        <li class="one">helloo bhaii Lorem, ipsum.</li>
+        <li class="one">helloo bhaii Lorem, ipsum.</li>
+        <li class="one">helloo bhaii Lorem, ipsum.</li>
+    </ul>
+</body>
+<script>
+    const one = document.querySelectorAll(".one");
+    // console.log(one);
+    one[0].innerHTML= "haann jii"
+    const div= document.createElement('div');
+    div.setAttribute('title',"generated title")
+    div.id=Math.round((Math.random()*100)%36)
+    div.className="helppp"
+    div.style.backgroundColor="red"
+    div.style.color="white"
+    div.style.padding="100px"    
+    // div.innerHTML="Readyy hoo bhaii aane ke liye"
+    const addText= document.createTextNode("Haan bhai aise bhi aaskta hoo");
+    div.appendChild(addText)
+    // console.log(div)
+    document.body.appendChild(div);   
+    const element= document.querySelector('li:nth-child(3)');
+    // console.log(element);
+    const newElem = document.createElement('li');
+    newElem.appendChild(document.createTextNode("Chall hatt"));
+    element.replaceWith(newElem)
+    const element2= document.querySelector('li:nth-child(3)');
+    element2.remove()
+</script>
+</html>
